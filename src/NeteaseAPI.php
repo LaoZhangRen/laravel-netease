@@ -201,13 +201,11 @@ class NeteaseAPI
      *
      * @return $result [返回array数组对象]
      */
-    public function updateUserId($accid, $name = '', $props = '{}', $token = '')
+    public function updateUserId($accid, $token)
     {
         $url = 'https://api.netease.im/nimserver/user/update.action';
         $data = array(
             'accid' => $accid,
-            'name' => $name,
-            'props' => $props,
             'token' => $token,
         );
         if ($this->RequestType == 'curl') {
